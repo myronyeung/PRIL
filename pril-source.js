@@ -7,7 +7,7 @@ var PRIL = PRIL || (function() {
             
         commonStyles.textContent = "img[data-prilId] { \
             background-repeat: no-repeat; \
-            color: transparent;";
+            color: transparent;}";
             
         document.querySelector("head").appendChild(commonStyles);
         
@@ -40,7 +40,7 @@ var PRIL = PRIL || (function() {
             
             breakpoint.textContent = "@media only screen and (min-width: " + min + "px) and (max-width: " + max + "px) { \
                 img[data-prilId=\"" + _id + "\"] { \
-                background-image: url(" + path + ");";
+                background-image: url(" + path + ");}}";
         
             return _image.parentNode.insertBefore(breakpoint, _image);
         } else {
