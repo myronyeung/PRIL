@@ -1,4 +1,3 @@
-<script>
 var PRIL = PRIL || (function() {
     "use strict";
     
