@@ -3,7 +3,7 @@ var PRIL = PRIL || (function() {
     
     (function _init() {
         // Create common style rules for all PRIL images.
-        let commonStyles = document.createElement("style");
+        var commonStyles = document.createElement("style");
             
         commonStyles.textContent = "img[data-prilId] { \
             background-repeat: no-repeat; \
@@ -14,7 +14,7 @@ var PRIL = PRIL || (function() {
         console.log("PRIL initialized.");
     }());
     
-    let _image = null,
+    var _image = null,
         _id = null;
     
     function _registerImage(img) {
@@ -34,7 +34,7 @@ var PRIL = PRIL || (function() {
     }
     
     function _createBreakpoint(min, max, path) {
-        let breakpoint = document.createElement("style");
+        var breakpoint = document.createElement("style");
             
         breakpoint.textContent = "@media only screen and (min-width: " + min + "px) and (max-width: " + max + "px) { \
             img[data-prilId=\"" + _id + "\"] { \
