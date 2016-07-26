@@ -34,13 +34,17 @@ var PRIL = PRIL || (function() {
     }
     
     function _createBreakpoint(min, max, path) {
-        var breakpoint = document.createElement("style");
+        if(arguments.length === 3 && Number.isInteger(min) && Number.isInteger(max) && min < max) {
+            var breakpoint = document.createElement("style");
             
-        breakpoint.textContent = "@media only screen and (min-width: " + min + "px) and (max-width: " + max + "px) { \
-            img[data-prilId=\"" + _id + "\"] { \
-            background-image: url(" + path + ");";
+            breakpoint.textContent = "@media only screen and (min-width: " + min + "px) and (max-width: " + max + "px) { \
+                img[data-prilId=\"" + _id + "\"] { \
+                background-image: url(" + path + ");";
         
-        return _image.parentNode.insertBefore(breakpoint, _image);
+            return _image.parentNode.insertBefore(breakpoint, _image);
+        } else {
+            return null;
+        }
     }
     
     return {
