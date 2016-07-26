@@ -27,6 +27,7 @@ var PRIL = PRIL || (function() {
         }
     }
     
+    // Remove src value in image, so background image (controlled by media queries) determines display.
     function _removeImgSrc() {
         if(_image) {
             _image.src = "";
@@ -54,7 +55,6 @@ var PRIL = PRIL || (function() {
             
             _createBreakpoint(min, max, path);
             
-            // Remove src. Background image (controlled by media queries) determines display.
             _removeImgSrc();
         }
     };
