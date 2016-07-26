@@ -5,6 +5,6 @@ This may be solution to a problem that doesn't exist, but here goes: how would s
 
 My answer: immediately after each img, paste my self-executing code, then call the add method to supply the img path and min/max breakpoints.
 
-It's messy, but simple.
+PRIL works by inlining a media query for each responsive image and min/max breakpoint combo. It's messy, but simple.
 
 Open example.html in your browser or take a look at my fiddle to see PRIL in action: https://jsfiddle.net/myronyeung/9km5zf4z/
